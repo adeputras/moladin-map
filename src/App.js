@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import MoladinMap from './lib/components/Map';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MoladinMap
+        apiKey="AIzaSyAJLGAiiDcJDw_4Fs6puOiG1Reeu3ZPYTQ"
+        lat={-6.22477}
+        lng={106.82562}
+        draggableMarker
+        onDragEnd={(coords, results) => {
+          console.log('coords:', coords);
+          console.log('results:', results);
+        }}
+        customMarker="https://cdn.moladin.com/static-images/b2c/v2/marker.svg"
+      />
     </div>
   );
 }
