@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <MoladinMap
-        apiKey="AIzaSyAJLGAiiDcJDw_4Fs6puOiG1Reeu3ZPYTQ"
+        apiKey={process.env.REACT_APP_API_KEY_GOOGLE_MAP}
         lat={-6.22477}
         lng={106.82562}
         draggableMarker
